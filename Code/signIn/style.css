@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --leftPurple: #CA21FD;
+  --rightPurple: #7F21FF;
+  --main: #68E1FD;
+  --light: #68FAFC;
+  --leftBlue: #2142FF;
+  --rightBlue: #218CFF;
+  --leftGreen: #21FFB5;
+  --rightGreen: #1EE6D5;
+  --dark: rgb(18, 30, 36);
+  --darker: rgb(8, 20, 26);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.signin__container {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% auto;
+      grid-template-columns: 40% auto;
+}
+
+.signIn__left {
+  width: 100%;
+  height: 100vh;
+  background: url("../../Assets/Illustrations/Index/background@1x.svg") no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.left__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left__container .logo {
+  width: 80px;
+  height: 80px;
+}
+
+.left__container .project__title {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.left__container .company__name {
+  margin-bottom: 20px;
+}
+
+.left__container p {
+  margin-top: 20px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.left__container a {
+  color: white;
+}
+
+.signIn__right {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signIn__right .right__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.signIn__right .right__container h1 {
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+}
+
+.signIn__right .right__container p {
+  margin: 30px 0;
+  line-height: 30px;
+}
+
+.signIn__right .right__container p a {
+  color: var(--rightBlue);
+}
+
+.signIn__right .right__container .progress__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.signIn__right .right__container .progress__container .progress-bar {
+  margin-right: 10px;
+  width: 140px;
+  height: 3px;
+  border-radius: 20px;
+  background-color: var(--dark);
+}
+
+.signIn__right .right__container .progress__container .progress-bar:nth-child(1) {
+  background-color: var(--rightBlue);
+}
+
+.signIn__right .button-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.signIn__right .button-1 .anonymous-btn {
+  padding: 10px;
+  margin-right: 20px;
+  background-color: var(--rightBlue);
+  border: none;
+  border-radius: 20px;
+}
+
+.signIn__right .button-1 .new_account {
+  padding: 10px;
+  margin-right: 20px;
+  background-color: transparent;
+  border: 1px var(--rightBlue) solid;
+  border-radius: 20px;
+}
+
+.signIn__right form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  color: var(--rightBlue);
+}
+
+.signIn__right form input {
+  margin-bottom: 30px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+}
+
+.signIn__right form input[type=text]:not(.browser-default):focus:not([readonly]),
+.signIn__right form input[type=password]:not(.browser-default):focus:not([readonly]) {
+  border-color: var(--rightBlue);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.signIn__right .next-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--leftGreen);
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */
