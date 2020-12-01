@@ -18,6 +18,11 @@
     font-family: 'Montserrat', sans-serif;
     /* outline: 1px solid red; */
 }
+
+html, body, main {
+    height: 100%;
+}
+
 main {
     display: grid;
     grid-template-columns: 8fr 15fr;
@@ -25,7 +30,7 @@ main {
 }
 main section:first-of-type {
     min-height: 100vh;
-    background: url("../../Assets/Illustrations/Index/background@1x.svg") no-repeat center center;
+    background: url("../Assets/Illustrations/Index/background@1x.svg") no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -65,7 +70,7 @@ main section:last-of-type h1 {
     font-size: 2.1em;
     font-weight: 600;
 }
-main section:last-of-type>div {
+main section:last-of-type>div:first-of-type {
     margin: 1.5em 0;
     width: 50%;
     height: 3px;
@@ -218,7 +223,129 @@ main section:last-of-type footer {
     padding: 1.25em 0;
     font-size: .9em;
     text-align: center;
+    color: #fff;
 }
 main section:last-of-type footer a {
     font-weight: 500;
+    color: #1ee6d5;
+}
+main section:last-of-type div:last-of-type {
+    display: none;
+}
+
+@media screen and (max-width: 1096px) {
+
+    main section:last-of-type form span {
+        width: 100%;
+    }
+
+    main section:last-of-type button {
+        font-size: 1em;
+    }
+    
+    main section:last-of-type form input[type=submit] {
+        padding: .75em 3em;
+        font-size: 1.1em;
+    }
+
+}
+
+@media screen and (max-width: 862px) {
+
+    main section:first-of-type > p {
+        font-size: .9em;
+    }
+
+}
+
+@media screen and (max-width: 776px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main section:first-of-type {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+
+    main section:last-of-type h1,
+    main section:last-of-type div:first-of-type,
+    main section:last-of-type > p {
+        display: none;
+    }
+
+    main section:last-of-type {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2em 1em;
+    }
+
+    main section:last-of-type div:last-of-type {
+        display: inline;
+        text-align: center;
+        order: 1;
+    }
+
+    main section:last-of-type div:last-of-type h3 {
+        font-size: 2em;
+        margin: .1em 0;
+    }
+
+    main section:last-of-type div:last-of-type p {
+        font-weight: 600;
+        font-size: 1.1em;
+    }
+
+    main section:last-of-type div:last-of-type svg {
+        -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, 0.7));
+        filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, 0.7));
+    }
+
+    main section:last-of-type div:last-of-type svg path {
+        fill: url(#MyGradient);
+    }
+
+    main section:last-of-type form {
+        order: 2;
+        margin: 5.6em 0 5.5em 0 ;
+        text-align: center;
+    }
+
+    main section:last-of-type button:nth-of-type(1) {
+        order: 3;
+    }
+
+    main section:last-of-type button:nth-of-type(2) {
+        margin-left: 0;
+        order: 4;
+    }
+
+    main section:last-of-type button {
+        border-radius: 0;
+        width: 100%;
+        padding: 1em 1.5em !important;
+        margin: .6em 0;
+        font-size: .9em;
+        align-self: flex-end;
+    }
+
+    main section:last-of-type form span input {
+        border-radius: 30px;
+    }
+
+    main section:last-of-type form input[type=submit] {
+        width: 60%;
+        font-size: 1.1em;
+        margin: 1.5em auto;
+    }
+
+    main section:last-of-type footer {
+        display: none;
+    }
+
 }
